@@ -205,3 +205,25 @@ The following screenshots document the results of the `train_random_forest` step
 
 These results were produced using the command:
 mlflow run . -P steps=train_random_forest
+
+
+## Releases
+
+This project uses GitHub Releases to track pipeline versions.
+
+- **v1.0.0**  
+  First stable version of the ML pipeline.  
+  Includes working steps for:
+  - downloading the raw data from W&B,
+  - basic price-based cleaning,
+  - data checks,
+  - train/validation/test split,
+  - and training the Random Forest model with metrics and artifacts logged to W&B.
+
+- **v1.0.1**  
+  Second version of the pipeline, released after running the pipeline on a new sample of data (`sample2.csv`).  
+  This version:
+  - ensures that the `basic_cleaning` step filters listings to the NYC geographic region using latitude/longitude bounds,
+  - maintains the existing cleaning and modeling behavior,
+  - has been successfully re-run on `sample2.csv` using the same MLflow steps.
+  
