@@ -179,3 +179,20 @@ Please, make sure all steps are using **the same** python version and that you h
 ## License
 
 [License](LICENSE.txt)
+
+
+## Model Training Results (W&B Screenshots)
+
+The following screenshots document the results of the `train_random_forest` step executed using MLflow and Weights & Biases:
+
+1. **Metrics Logged During Training**  
+   - The `r2` and `mae` metrics recorded during model validation.
+
+2. **Feature Importance Plot**  
+   - Visualization generated from the trained Random Forest model showing the relative importance of each feature.
+
+3. **Model Export Artifact**  
+   - The `random_forest_export` artifact saved and uploaded to W&B containing the serialized model.
+
+These results were produced using the command:
+mlflow run . -P steps=train_random_forest
